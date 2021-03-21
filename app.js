@@ -33,7 +33,7 @@ function generateName(){
     return randomName;
 }
 
-function checkGender(randomName){
+/*function checkGender(randomName){
     //Determine male from female names
     const baseline = names.indexOf(randomName);
     if (baseline < 20){
@@ -41,7 +41,7 @@ function checkGender(randomName){
     } else {
         return 'pink';
     }
-}
+}*/
 
 function applyNamesToDivs(){
     nameDivs.forEach( div =>{
@@ -55,8 +55,8 @@ function applyNamesToDivs(){
             const randomName = generateName();
             div.children[0].innerText = randomName;
             //Apply either blue or pink based on the gender
-            const genderBackgroundColor = checkGender(randomName);
-            div.style.backgroundColor = genderBackgroundColor;
+            //const genderBackgroundColor = checkGender(randomName);
+            //div.style.backgroundColor = genderBackgroundColor;
         }
 
 

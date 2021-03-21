@@ -66,16 +66,18 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: red;
+  background: black;
 }
 
 .name h2 {
-  color: white;
+  color: #fafafa;
 }
 
 .name button {
+  font-size: 2rem;
   padding: 10px;
-  background: transparent;
+  color: #fafafa;
+  background: black;
   border: none;
   cursor: pointer;
 }
@@ -109,7 +111,7 @@ svg {
   background: #426aee;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #fafafa;
 }
 
 .panel p {

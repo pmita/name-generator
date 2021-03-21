@@ -9,13 +9,15 @@
     height: 80vh;
     flex: 1;
     @include flex(column, space-evenly, center);
-    background :red;
+    background :$black;
     h2{
-        color: white;
+        color: $white;
     }
     button{
+        font-size: 2rem;
         padding: 10px;
-        background: transparent;
+        color: $white;
+        background: $black;
         border: none;
         cursor: pointer;
     }
