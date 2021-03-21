@@ -1,0 +1,52 @@
+.names{
+    width: 100%;
+    min-height: 80vh;
+    @include flex(row, center, center);
+}
+
+.name{
+    width: 100%;
+    height: 80vh;
+    flex: 1;
+    @include flex(column, space-evenly, center);
+    background :red;
+    h2{
+        color: white;
+    }
+    button{
+        padding: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.locked{
+    margin: 50px 0 0 0;
+}
+
+/*Style the bottom 20vh of the screen*/
+.panel{
+    height: 20vh;
+    @include flex( row, space-evenly, center);
+    button{
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 1rem;
+        background: rgb(66, 106, 238);
+        border: none;
+        border-radius: 10px;
+        color: $white;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+/*Make all individual panels look the same*/
+.library-panel,
+.generate-panel,
+.save-panel{
+    @include flex(column, center, center);
+}
+
