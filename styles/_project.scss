@@ -14,7 +14,7 @@
         color: $white;
     }
     button{
-        font-size: 2rem;
+        font-size: 1.6rem;
         padding: 10px;
         color: $white;
         background: $black;
@@ -24,7 +24,8 @@
 }
 
 .locked{
-    margin: 50px 0 0 0;
+    color: $black !important;
+    background: $white !important;
 }
 
 /*Style the bottom 20vh of the screen*/
@@ -32,16 +33,19 @@
     height: 20vh;
     @include flex( row, space-evenly, center);
     button{
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         margin: 1rem;
         padding: 1rem;
-        background: rgb(66, 106, 238);
+        background: $black;
         border: none;
         border-radius: 10px;
         color: $white;
+        &:hover{
+            cursor: pointer;
+        }
     }
     p{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -52,3 +56,21 @@
     @include flex(column, center, center);
 }
 
+@media screen and(max-width: 800px){
+    .names{
+        @include flex(column, center, center);
+    }
+
+    .name{
+        flex: 1;
+        @include flex(row, space-evenly, center);
+        background :$black;
+        h2{
+            flex: 1;
+            text-align: center;
+        }
+        button{
+            flex: 1;
+        }
+    }
+}

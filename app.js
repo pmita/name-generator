@@ -11,7 +11,6 @@ names = ["Aaran", "Aaren", "Aarez", "Aarman", "Aaron", "Aaron-James",
 //Grab all divs
 const nameDivs = document.querySelectorAll('.name');
 const lockButtons = document.querySelectorAll('.lock');
-//Generate button
 const refreshButton = document.querySelector('.generate');
 
 /*                  Event Listeners                   */
@@ -19,6 +18,11 @@ const refreshButton = document.querySelector('.generate');
 lockButtons.forEach( button =>{
     button.addEventListener('click', ()=>{
         button.classList.toggle('locked');
+        if (button.classList.contains('locked')){
+            button.children[0].classList.replace('fa-lock-open', 'fa-lock');
+        } else {
+            button.children[0].classList.replace('fa-lock', 'fa-lock-open');
+        }
     });
 });
 
@@ -29,8 +33,7 @@ refreshButton.addEventListener('click',applyNamesToDivs);
 /*                  Fuctions                           */
 function generateName(){
     //Pink a random name from the array
-    const randomName = names[Math.floor(Math.random()*44)];
-    return randomName;
+    return names[Math.floor(Math.random()*44)];
 }
 
 /*function checkGender(randomName){
